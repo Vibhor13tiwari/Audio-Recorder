@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void Record(View view){
+    public void Record(View view){  //this func is for record button//
         try{
             mediaRecorder=new MediaRecorder();
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-        public void Play(View view){
+        public void Play(View view){   //this func is for play button//
         try{
             mediaPlayer= new MediaPlayer();
             mediaPlayer.setDataSource(getRecordingFilePath());
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-     public void Stop(View view){
+     public void Stop(View view){    
         mediaRecorder.stop();
         mediaRecorder.release();
         mediaRecorder = null;
