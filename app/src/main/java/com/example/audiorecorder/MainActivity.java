@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.RECORD_AUDIO},MICROPHONE_PERMISSION_CODE);
 
     }
-    private String getRecordingFilePath(){
+    private String getRecordingFilePath(){ // records file path
         ContextWrapper contextWrapper= new ContextWrapper(getApplicationContext());
         File musicDirectory = contextWrapper.getExternalFilesDir(Environment.DIRECTORY_MUSIC);
         File file= new File (musicDirectory,"testRecordingFile"+".mp3");
