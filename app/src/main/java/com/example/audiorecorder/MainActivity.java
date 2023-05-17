@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         if(isMicrophonePresent()){
             getMicrophonePermission();
         }
+        Toast.makeText(this, "App OK", Toast.LENGTH_LONG).show();
     }
 
     public void Record(View view){  //this func is for record button//
