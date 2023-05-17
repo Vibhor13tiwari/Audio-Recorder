@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.ContextWrapper;
 import android.content.pm.PackageManager;
-import android.media.MediaPlayer;
+import android.media.MediaPlayer; 
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-     public void Stop(View view){    
+     public void Stop(View view){    //this function is used to add stop button//
         mediaRecorder.stop();
         mediaRecorder.release();
         mediaRecorder = null;
