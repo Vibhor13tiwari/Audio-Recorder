@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
     }
 
-    private void getMicrophonePermission(){
+    private void getMicrophonePermission(){ //this function is used to acquire mic access
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)==PackageManager.PERMISSION_DENIED)
             ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.RECORD_AUDIO},MICROPHONE_PERMISSION_CODE);
 
