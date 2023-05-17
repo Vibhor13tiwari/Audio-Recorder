@@ -58,7 +58,12 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+     public void Stop(View view){
+        mediaRecorder.stop();
+        mediaRecorder.release();
+        mediaRecorder = null;
+        Toast.makeText(this, "Recording has stopped", Toast.LENGTH_LONG).show();
+    }
 
     private boolean isMicrophonePresent(){
         if(this.getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE))
