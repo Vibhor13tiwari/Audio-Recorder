@@ -46,6 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+        public void Play(View view){
+        try{
+            mediaPlayer= new MediaPlayer();
+            mediaPlayer.setDataSource(getRecordingFilePath());
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+            Toast.makeText(this, "Playing", Toast.LENGTH_LONG).show();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 
 
     private boolean isMicrophonePresent(){
